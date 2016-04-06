@@ -1,0 +1,20 @@
+<% include header %>
+
+  <form id="search_twitter">
+  <input type="text" name="screen_name" placeholder="Search Some Tweets!" class="form-control">
+  <input type="submit" value="Search" class="btn btn-default" style="display:none;">
+  </form>
+
+  <table id="twitter_feed" class="table table-hover active">
+  <thead>
+  <th>Tweet</th>
+  <th>Tweeter</th>
+  <th>Date</th>
+  </thead>
+  </table>
+
+  <% data.forEach(function(tweet){ %>
+ <p><%- tweet.text %></p>
+   <% });  %>
+
+<% include footer %>
